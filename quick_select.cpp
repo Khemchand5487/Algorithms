@@ -28,7 +28,7 @@ int kthSmallest(int arr[], int l, int r, int k) {
 
     int pos = partition(arr, l, r);
     if(pos+1==k) return arr[pos];
-    else if(pos+1<k) kthSmallest(arr, pos+1, r, k);
+    else if(pos+1<k) return kthSmallest(arr, pos+1, r, k);
     else return kthSmallest(arr, l, pos-1, k);
 
 }
